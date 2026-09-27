@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Product Pricing Cards</title>
+  <meta name="description" content="Simple, transparent pricing designed to grow with your business. Choose the perfect plan for your team.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Main Pricing Section Container -->
+  <main class="pricing-container">
+    
+    <!-- Header Section -->
+    <header class="pricing-header">
+      <span class="product-badge">PRICING PLANS</span>
+      <h1 class="main-heading">Choose the Perfect Plan for You</h1>
+      <p class="sub-heading">Simple, transparent pricing designed to grow with your business.</p>
+      
+      <!-- Billing Toggle Component -->
+      <div class="toggle-container" role="region" aria-label="Billing frequency selection">
+        <span class="toggle-label monthly-label active" id="monthly-label">Monthly</span>
+        
+        <button 
+          type="button" 
+          class="billing-toggle" 
+          id="billingToggle" 
+          role="switch" 
+          aria-checked="false" 
+          aria-labelledby="yearly-label"
+          title="Toggle between monthly and yearly billing"
+        >
+          <span class="toggle-circle"></span>
+        </button>
+        
+        <div class="yearly-option">
+          <span class="toggle-label yearly-label" id="yearly-label">Yearly</span>
+          <span class="discount-badge" id="discountBadge">Save 20%</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Pricing Cards Grid -->
+    <section class="pricing-grid" aria-label="Subscription plans">
+      
+      <!-- 1. Starter Card -->
+      <article class="pricing-card starter-card" id="card-starter">
+        <div class="card-inner">
+          <div class="card-header">
+            <h2 class="plan-name">Starter</h2>
+            <p class="plan-desc">For individuals and freelancers getting started.</p>
+          </div>
+
+          <div class="pricing-box">
+            <div class="price-wrapper">
+              <span class="currency-symbol">$</span>
+              <span class="price-value" data-plan="starter" data-monthly="9" data-yearly="86">9</span>
+            </div>
+            <span class="billing-period">/month</span>
+          </div>
+
+          <p class="billing-note" data-monthly-note="Billed monthly" data-yearly-note="Save $22 billed annually">Billed monthly</p>
+
+          <button type="button" class="btn btn-secondary cta-btn" data-plan-title="Starter">
+            Get Started
+          </button>
+
+          <div class="card-divider"></div>
+
+          <div class="features-header">What's included:</div>
+          <ul class="features-list">
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>1 User</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>5 Projects</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>5 GB Storage</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Basic Analytics</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Email Support</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2. Professional Card (Featured / Popular) -->
+      <article class="pricing-card professional-card featured" id="card-professional">
+        <!-- Badge Ribbon -->
+        <div class="badge-ribbon popular-ribbon">
+          <span>POPULAR</span>
+        </div>
+
+        <div class="card-inner">
+          <div class="card-header">
+            <h2 class="plan-name">Professional</h2>
+            <p class="plan-desc">For fast-growing teams seeking scalable power.</p>
+          </div>
+
+          <div class="pricing-box">
+            <div class="price-wrapper">
+              <span class="currency-symbol">$</span>
+              <span class="price-value" data-plan="professional" data-monthly="29" data-yearly="278">29</span>
+            </div>
+            <span class="billing-period">/month</span>
+          </div>
+
+          <p class="billing-note" data-monthly-note="Billed monthly" data-yearly-note="Save $70 billed annually">Billed monthly</p>
+
+          <button type="button" class="btn btn-primary cta-btn" data-plan-title="Professional">
+            Start Free Trial
+          </button>
+
+          <div class="card-divider"></div>
+
+          <div class="features-header">Everything in Starter, plus:</div>
+          <ul class="features-list">
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span><strong>Up to 5 Users</strong></span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span><strong>Unlimited Projects</strong></span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>50 GB Storage</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Advanced Analytics</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Priority Support</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Custom Integrations</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 3. Enterprise Card (Best Value) -->
+      <article class="pricing-card enterprise-card" id="card-enterprise">
+        <!-- Badge Ribbon -->
+        <div class="badge-ribbon best-value-ribbon">
+          <span>BEST VALUE</span>
+        </div>
+
+        <div class="card-inner">
+          <div class="card-header">
+            <h2 class="plan-name">Enterprise</h2>
+            <p class="plan-desc">For large organizations requiring bespoke controls.</p>
+          </div>
+
+          <div class="pricing-box">
+            <div class="price-wrapper">
+              <span class="currency-symbol">$</span>
+              <span class="price-value" data-plan="enterprise" data-monthly="79" data-yearly="758">79</span>
+            </div>
+            <span class="billing-period">/month</span>
+          </div>
+
+          <p class="billing-note" data-monthly-note="Billed monthly" data-yearly-note="Save $190 billed annually">Billed monthly</p>
+
+          <button type="button" class="btn btn-secondary cta-btn" data-plan-title="Enterprise">
+            Contact Sales
+          </button>
+
+          <div class="card-divider"></div>
+
+          <div class="features-header">Everything in Pro, plus:</div>
+          <ul class="features-list">
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span><strong>Unlimited Users</strong></span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Unlimited Projects</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>500 GB Storage</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Advanced Analytics</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>24/7 Priority Support</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Custom Integrations</span>
+            </li>
+            <li class="feature-item">
+              <span class="check-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 11 8 15 16 6"></polyline>
+                </svg>
+              </span>
+              <span>Dedicated Account Manager</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Trust & FAQ Banner -->
+    <footer class="pricing-footer">
+      <div class="trust-indicators">
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">🔒</span>
+          <span>14-day money-back guarantee</span>
+        </div>
+        <div class="trust-divider">·</div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">⚡</span>
+          <span>Cancel or switch plans anytime</span>
+        </div>
+        <div class="trust-divider">·</div>
+        <div class="trust-item">
+          <span class="trust-icon" aria-hidden="true">💳</span>
+          <span>No credit card required for trial</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Interactive Feedback Toast / Modal Dialog -->
+  <aside class="action-modal" id="actionModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-icon-wrap" id="modalIcon">✓</div>
+      <h3 class="modal-title" id="modalTitle">Plan Selected</h3>
+      <p class="modal-message" id="modalMessage">You selected the plan.</p>
+      <div class="modal-plan-summary" id="modalSummary"></div>
+      <button type="button" class="btn btn-primary modal-close-btn" id="modalCloseBtn">
+        Continue
+      </button>
+    </div>
+  </aside>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

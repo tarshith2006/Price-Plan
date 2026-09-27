@@ -1,0 +1,6 @@
+{
+  "name": "SaaS Product Pricing Cards",
+  "description": "Modern, responsive commercial SaaS pricing cards with interactive monthly/yearly billing toggle, animated pricing, and feature comparison.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
